@@ -1,8 +1,8 @@
 package server
 
 import (
-	"conceitoExato/adapter/env"
 	"fmt"
+	"hackthon/adapter/env"
 
 	"github.com/gin-gonic/gin"
 )

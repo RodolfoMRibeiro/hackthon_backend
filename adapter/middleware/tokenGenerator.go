@@ -1,9 +1,9 @@
 package middleware
 
 import (
-	"conceitoExato/adapter/env"
-	"conceitoExato/common/library"
-	"conceitoExato/common/util"
+	"hackthon/adapter/env"
+	"hackthon/common/library"
+	"hackthon/common/util"
 	"net/http"
 	"time"
 

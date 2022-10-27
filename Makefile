@@ -31,3 +31,8 @@ kill-container:
 	@docker volume prune -f
 	@echo "--------------------------------------------"
 	@echo ${COLOR_GREEN} DONE
+
+ngrok:
+	@echo ${COLOR_YELLOW}Starting Ngrok in Port 8080...${COLOR_WHITE}
+	@ngrok http 8080
+	@echo ${COLOR_GREEN} DONE

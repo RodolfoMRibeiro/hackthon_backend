@@ -1,8 +1,8 @@
 package db
 
 import (
-	"conceitoExato/adapter/env"
 	"fmt"
+	"hackthon/adapter/env"
 	"log"
 
 	"gorm.io/gorm"

@@ -1,9 +1,9 @@
 package middleware
 
 import (
-	"conceitoExato/adapter/env"
-	"conceitoExato/common/util"
 	"fmt"
+	"hackthon/adapter/env"
+	"hackthon/common/util"
 
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt"

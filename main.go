@@ -1,11 +1,11 @@
 package main
 
 import (
-	"conceitoExato/adapter/db"
-	"conceitoExato/adapter/db/seed"
-	"conceitoExato/adapter/env"
-	"conceitoExato/adapter/router"
-	"conceitoExato/adapter/server"
+	"hackthon/adapter/db"
+	"hackthon/adapter/db/seed"
+	"hackthon/adapter/env"
+	"hackthon/adapter/router"
+	"hackthon/adapter/server"
 )
 
 func main() {
