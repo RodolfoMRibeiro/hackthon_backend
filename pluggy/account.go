@@ -25,7 +25,7 @@ func ListAccounts(item_id string) dto.Accounts {
 
 	json.Unmarshal(body, &acc)
 
-	return dto.Accounts{}
+	return acc
 }
 
 func RetriveAccount(account_id string) dto.RetriveBankAccount {

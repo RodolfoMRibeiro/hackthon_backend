@@ -4,7 +4,7 @@ import "time"
 
 type CreateItemUserDto struct {
 	ID              string      `json:"id"`
-	Connector       Connector   `json:"connector"`
+	Connector       UserItem    `json:"connector"`
 	CreatedAt       time.Time   `json:"createdAt"`
 	UpdatedAt       time.Time   `json:"updatedAt"`
 	Status          string      `json:"status"`
@@ -29,7 +29,7 @@ type Health struct {
 	Status string      `json:"status"`
 	Stage  interface{} `json:"stage"`
 }
-type Connector struct {
+type UserItem struct {
 	ID             int           `json:"id"`
 	Name           string        `json:"name"`
 	PrimaryColor   string        `json:"primaryColor"`
