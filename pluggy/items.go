@@ -27,11 +27,28 @@ func CreateItem() dto.CreateItemUserDto {
 	defer res.Body.Close()
 	body, _ := ioutil.ReadAll(res.Body)
 
-	hello := dto.CreateItemUserDto{}
+	createItemUserDto := dto.CreateItemUserDto{}
 
-	json.Unmarshal(body, &hello)
-	fmt.Println(hello)
-	// fmt.Println(res)
-	// fmt.Println(string(body))
-	return hello
+	json.Unmarshal(body, &createItemUserDto)
+	fmt.Println(createItemUserDto)
+	return createItemUserDto
+}
+
+func DeleteItem(uuid string) {
+
+	url := "https://api.pluggy.ai/items/" + uuid
+
+	req, _ := http.NewRequest("DELETE", url, nil)
+
+	req.Header.Add("accept", "application/json")
+	req.Header.Add("X-API-KEY", env.PuggyApi.API_KEY)
+
+	res, _ := http.DefaultClient.Do(req)
+
+	defer res.Body.Close()
+	body, _ := ioutil.ReadAll(res.Body)
+
+	fmt.Println(res)
+	fmt.Println(string(body))
+
 }
