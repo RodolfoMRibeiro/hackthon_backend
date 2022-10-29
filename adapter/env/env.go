@@ -26,7 +26,8 @@ type SecretKey struct {
 }
 
 type PuggyConfig struct {
-	API_KEY string `env:"PLUGGY_API_KEY"`
+	API_KEY      string `env:"PLUGGY_API_KEY"`
+	ACCESS_TOKEN string
 }
 
 func Load() {

@@ -5,9 +5,14 @@ import (
 	"hackthon/pluggy"
 )
 
+func do() {
+
+}
+
 func main() {
-	pluggy.GenerateAccessToken()
 	env.Load()
+	pluggy.GenerateAccessToken()
+	pluggy.CreateItem()
 	// db.StartDatabase()
 	// seed.SeedDatabase()
 	// servidor := server.CreateServer()

@@ -1,6 +1,7 @@
 package pluggy
 
 import (
+	"encoding/json"
 	"fmt"
 	"hackthon/adapter/env"
 	"io/ioutil"
@@ -30,7 +31,7 @@ func GenerateApiKey() {
 }
 
 func GenerateAccessToken() {
-
+	tokener := AccessToken{}
 	url := "https://api.pluggy.ai/connect_token"
 
 	req, _ := http.NewRequest("POST", url, nil)
@@ -43,6 +44,10 @@ func GenerateAccessToken() {
 
 	defer res.Body.Close()
 	body, _ := ioutil.ReadAll(res.Body)
+
+	json.Unmarshal(body, &tokener)
+
+	env.PuggyApi.ACCESS_TOKEN = tokener.AccessToken
 
 	fmt.Println(res)
 	fmt.Println(string(body))
