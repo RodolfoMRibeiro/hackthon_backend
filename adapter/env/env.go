@@ -1,9 +1,10 @@
 package env
 
 var (
-	Mysql  MysqlConfig
-	Server ServerConfig
-	Secret SecretKey
+	Mysql    MysqlConfig
+	Server   ServerConfig
+	Secret   SecretKey
+	PuggyApi PuggyConfig
 )
 
 type MysqlConfig struct {
@@ -24,8 +25,13 @@ type SecretKey struct {
 	SECRET_KEY string `env:"SECRET_KEY"`
 }
 
+type PuggyConfig struct {
+	API_KEY string `env:"PLUGGY_API_KEY"`
+}
+
 func Load() {
 	loadStructWithEnvVars(&Mysql)
 	loadStructWithEnvVars(&Server)
 	loadStructWithEnvVars(&Secret)
+	loadStructWithEnvVars(&PuggyApi)
 }
